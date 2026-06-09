@@ -1,7 +1,7 @@
 let homeScoreEl = document.getElementById("home-score")
-let guestScoreEl = document.getElementById("guest-score")
+let awayScoreEl = document.getElementById("away-score")
 let homeScore = 0
-let guestScore = 0
+let awayScore = 0
 
 function addPoints(team, points) {
     // Retrieve and calculate score
@@ -35,7 +35,7 @@ function getTeamScore(team) {
     if (team === "HOME") {
         return homeScore
     } else {
-        return guestScore
+        return awayScore
     }
 }
 
@@ -44,7 +44,7 @@ function getTeamEl(team) {
     if (team === "HOME") {
         return homeScoreEl
     } else {
-        return guestScoreEl
+        return awayScoreEl
     }
 }
 
@@ -53,17 +53,17 @@ function setTeamScore(team, score) {
     if (team === "HOME") {
         homeScore = score
     } else {
-        guestScore = score
+        awayScore = score
     }
 }
 
 function highlightWinningScore() {
-    if (homeScore > guestScore) {
+    if (homeScore > awayScore) {
         homeScoreEl.style.color = "#ffd700"
-    } else if (guestScore > homeScore) {
-        guestScoreEl.style.color = "#ffd700"
+    } else if (awayScore > homeScore) {
+        awayScoreEl.style.color = "#ffd700"
     } else {
         homeScoreEl.style.color = "#F94F6D"
-        guestScoreEl.style.color = "#F94F6D"
+        awayScoreEl.style.color = "#F94F6D"
     }
 }
