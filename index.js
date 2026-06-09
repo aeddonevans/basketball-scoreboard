@@ -1,5 +1,7 @@
 let homeScoreEl = document.getElementById("home-score")
 let awayScoreEl = document.getElementById("away-score")
+console.log(homeScoreEl)
+console.log(awayScoreEl)
 let homeScore = 0
 let awayScore = 0
 
@@ -11,13 +13,12 @@ function addPoints(team, points) {
     
     // Save and display
     setTeamScore(team, newScore)
-    highlightWinningScore()
     teamEl.textContent = formatScore(newScore)
+    highlightWinningScore()
 }
 
 function calculateScore(score, addition) {
     // Caluclate team score
-    console.log(score + addition)
     return score + addition   
 }
 
@@ -60,8 +61,10 @@ function setTeamScore(team, score) {
 function highlightWinningScore() {
     if (homeScore > awayScore) {
         homeScoreEl.style.color = "#ffd700"
+        awayScoreEl.style.color = "#F94F6D"
     } else if (awayScore > homeScore) {
         awayScoreEl.style.color = "#ffd700"
+        homeScoreEl.style.color = "#F94F6D"
     } else {
         homeScoreEl.style.color = "#F94F6D"
         awayScoreEl.style.color = "#F94F6D"
