@@ -1,7 +1,5 @@
 let homeScoreEl = document.getElementById("home-score")
 let awayScoreEl = document.getElementById("away-score")
-console.log(homeScoreEl)
-console.log(awayScoreEl)
 let homeScore = 0
 let awayScore = 0
 
